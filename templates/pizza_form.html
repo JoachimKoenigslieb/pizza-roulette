@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>BESTIL DIN PIZZA-ROULETTE</h1>
+<div>
+	<form action="{{ url_for('call')  }}"  name="pizza"> 
+		<label for="name">Navn<label>
+		<input type="text" name="name" placeholder="Navn" required align="center"><br>
+		<label for="number">Tlf. Nummer til pizzariat<label>
+		<input type="tel" name="number" placeholder="00000000" required align="center" pattern="[0-9]{8}"><br>
+		<label for="low">Fra nr.:<label>
+		<input type="number" name="low" placeholder="0" required align="center"><br>
+		<label for="high">Til nr.:<label>
+		<input type="number" name="high" placeholder="50" required align="center"><br>
+		<label for="pizzas">Antal pizzaer:<label>
+		<input type="number" name="pizzas" placeholder="4" required align="center"><br>
+		<input type="submit" value="submit">
+	</form>
+</div>
+
+{{ table }}
+
+</body>
+{% endblock %}
