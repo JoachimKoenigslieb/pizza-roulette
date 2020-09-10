@@ -34,6 +34,7 @@ def call():
     nonce = generate_speech(pizzas, low, high, name)
 
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
+    
     resp = f"<Response><Play>{URL}/static/speech{nonce}.mp3</Play></Response>"
     call = client.calls.create(twiml=resp, to=f'+45{number}', from_=FROM)
 
@@ -49,8 +50,7 @@ def generate_speech(n, low, high, name, debug=False): #generate speech that says
    
     nonce = random.randint(0, 20000000)
 
-    if not debug:
-        tts = gTTS(text=speech, lang='da')
-        tts.save(f"./static/speech{nonce}.mp3")
+    tts = gTTS(text=speech, lang='da')
+    tts.save(f"./static/speech{nonce}.mp3")
 
     return nonce
