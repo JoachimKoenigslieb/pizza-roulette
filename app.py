@@ -35,7 +35,7 @@ def call():
 
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
     resp = f"<Response><Play>{URL}/static/speech{nonce}.mp3</Play></Response>"
-    #call = client.calls.create(twiml=resp, to=f'+45{number}', from_=FROM)
+    call = client.calls.create(twiml=resp, to=f'+45{number}', from_=FROM)
 
     return f'jeg tror det virkede! Din nonce er {nonce}', 200
 
