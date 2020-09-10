@@ -5,4 +5,3 @@
 /projects/**
 !.gitkeep
 *.env
-/static/**
