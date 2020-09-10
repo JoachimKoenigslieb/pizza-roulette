@@ -31,7 +31,7 @@ def call():
     if not pizzas:
         return 'error! du skal vælge mindst en pizz', 404
 
-    nonce = generate_speech(pizzas, low, high, name, debug=True)
+    nonce = generate_speech(pizzas, low, high, name)
 
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
     resp = f"<Response><Play>{URL}/static/speech{nonce}.mp3</Play></Response>"
