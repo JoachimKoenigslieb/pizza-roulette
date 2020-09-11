@@ -44,7 +44,7 @@ def generate_speech(n, low, high, name, debug=False): #generate speech that says
     lst = [random.randint(int(low), int(high)) for _ in range(int(n))]    
 
     if len(lst) > 0:
-        speech = f'Hej. Du snakker med {name}. Jeg er en robot. Jeg vil gerne bestille en nummer {"og en nummer".join([str(s) for s in n])}. Det var {"og en nummer".join([str(s) for s in n])}. Jeg henter om 20 minutter. Dette er ikke en prank. Mange tak.'
+        speech = f'Hej. Du snakker med {name}. Jeg er en robot. Jeg vil gerne bestille en nummer {"og en nummer".join([str(s) for s in lst])}. Det var {"og en nummer".join([str(s) for s in lst])}. Jeg henter om 20 minutter. Dette er ikke en prank. Mange tak.'
     else: 
         speech = f'Hej. Dette er et prank call. Jeg er ikke sulten'
    
