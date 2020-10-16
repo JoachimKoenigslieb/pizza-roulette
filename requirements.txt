@@ -19,3 +19,5 @@ soupsieve==2.0.1
 twilio==6.45.1
 urllib3==1.25.10
 Werkzeug==1.0.1
+gevent-websocket==0.10.1
+websockets==8.1
