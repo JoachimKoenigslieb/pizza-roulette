@@ -107,12 +107,12 @@ def generate_speech(n, low, high, name, debug=False): #generate speech that says
 
     return nonce
 
-if __name__ == '__main__':
-    app.logger.setLevel(logging.DEBUG)
-    from gevent import pywsgi
-    from geventwebsocket.handler import WebSocketHandler
-    server = pywsgi.WSGIServer(('', HTTP_SERVER_PORT), app, handler_class=WebSocketHandler, log=app.logger)
-    print("Server listening on: http://localhost:" + str(HTTP_SERVER_PORT))
-    server.serve_forever()
+#if __name__ == '__main__':
+#    app.logger.setLevel(logging.DEBUG)
+#    from gevent import pywsgi
+#    from geventwebsocket.handler import WebSocketHandler
+#    server = pywsgi.WSGIServer(('', HTTP_SERVER_PORT), app, handler_class=WebSocketHandler, log=app.logger)
+#    print("Server listening on: http://localhost:" + str(HTTP_SERVER_PORT))
+#    server.serve_forever()
 
 
